@@ -1,8 +1,9 @@
 # MakeFortDep
-Small Python3 script to build fortran dependencies. Only supports USE statement for now.
+Small Python3 script to build fortran dependencies. Only supports USE statement for now. Creates invisible (.name.d) dependecy file for each source file .f90.
 
 Can be embedded into the project through the call from the Makefile.
-**Example:**
+
+**Example** (will put all the dependecy rules into one file -> .depends) **:**
 ```
 FSRC = $(wildcard *.f90)
 FDEPS = $(patsubst %.f90,.%.d,$(FSRC))
